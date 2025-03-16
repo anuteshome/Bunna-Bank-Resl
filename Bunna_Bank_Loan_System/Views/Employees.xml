@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Action -->
+        <record id="bunna_employee_action" model="ir.actions.act_window">
+            <field name="name">Employee</field>
+            <field name="res_model">bunna.employees</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="bunna_employee_view_tree" model="ir.ui.view">
+            <field name="name">bunna.employees.view.tree</field>
+            <field name="model">bunna.employees</field>
+            <field name="arch" type="xml">
+                <tree string="Employees">
+                    <field name="employee_id"/>
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="salary"/>
+                    <field name="working_unit"/>
+                    <field name="district"/>
+                    <field name="date_of_birth"/>
+                    <field name="date_of_employment"/>
+                    <field name="email"/>
+                    <field name="phone_number"/>
+                    <field name="existing_loans"/>
+                    <field name="isPermanent"/>
+                    <!-- <field name="working_months"/> -->
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="bunna_employee_view_form" model="ir.ui.view">
+            <field name="name">bunna.employees.view.form</field>
+            <field name="model">bunna.employees</field>
+            <field name="arch" type="xml">
+                <form string="Employee">
+                    <sheet>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="name"/>
+                            <field name="age"/>
+                            <field name="salary"/>
+                        </group>
+
+                        <group>
+                            <field name="working_unit"/>
+                            <field name="district"/>
+                            <field name="date_of_birth"/> 
+                        </group>
+
+                        <group>
+                            <field name="date_of_employment"/>
+                            <field name="email"/>
+                            <field name="phone_number"/>
+                            <field name="existing_loans"/>
+                            <field name="isPermanent"/>
+                            <field name="working_months"/> 
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="bunna_root_menu" name="Bunna Bank Loan System"/>
+
+        <menuitem id="bunna_employee_menu"
+                  name="My Employees"
+                  parent="bunna_root_menu"
+                  action="bunna_employee_action"
+                  sequence="10"/>
+
+
+             <menuitem id="hr_employee_menu"
+          name="Hr"
+          parent="bunna_root_menu"
+          action="Testing_bunna_hr_action"
+          sequence="20"/>
+
+<menuitem id="bunna_branch_menu"
+          name="Branches"
+          parent="bunna_root_menu"
+          action="bunna_branch_action"
+          sequence="20"/>
+
+    </data>
+</odoo>

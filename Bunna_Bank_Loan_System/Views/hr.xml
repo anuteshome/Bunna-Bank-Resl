@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="Testing_bunna_hr_action" model="ir.actions.act_window">
+    <field name="name">HR</field>
+    <field name="res_model">bunna.hr</field>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[]</field>
+    <field name="context">{}</field>
+</record>
+
+
+    <record id="bunna_hr_view_tree" model="ir.ui.view">
+        <field name="name">bunna.hr.view.tree</field>
+        <field name="model">bunna.hr</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="branch_id"/>
+                <field name="district_name"/>
+                <field name="branch_name"/>
+                <field name="number_of_employee"/>
+                <field name="total_amount_granted"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="bunna_hr_view_form" model="ir.ui.view">
+        <field name="name">bunna.hr.view.form</field>
+        <field name="model">bunna.hr</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="branch_id"/>
+                        <field name="district_name"/>
+                        <field name="branch_name"/>
+                        <field name="number_of_employee"/>
+                        <field name="total_amount_granted"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

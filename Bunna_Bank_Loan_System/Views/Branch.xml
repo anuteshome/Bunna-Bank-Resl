@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Action for Branch Model -->
+        <record id="bunna_branch_action" model="ir.actions.act_window">
+            <field name="name">Branch</field>
+            <field name="res_model">bunna.branch</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="bunna_branch_view_tree" model="ir.ui.view">
+            <field name="name">bunna.branch.view.tree</field>
+            <field name="model">bunna.branch</field>
+            <field name="arch" type="xml">
+                <tree string="Branches">
+                    <field name="pending_request_id"/>
+                    <!-- <field name="employee_id"/> -->
+                    <field name="loan_amount"/>
+                    <!-- <field name="guarantee_id"/> -->
+                    <field name="repayment_period"/>
+                    <field name="loan_status"/>
+                    <field name="branch_id"/>
+                    <field name="district_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="bunna_branch_view_form" model="ir.ui.view">
+            <field name="name">bunna.branch.view.form</field>
+            <field name="model">bunna.branch</field>
+            <field name="arch" type="xml">
+                <form string="Branch">
+                    <sheet>
+                        <group>
+                            <field name="pending_request_id"/>
+                            <!-- <field name="employee_id"/> -->
+                            <field name="loan_amount"/>
+                        </group>
+                        <group>
+                            <!-- <field name="guarantee_id"/> -->
+                            <field name="repayment_period"/>
+                            <field name="loan_status"/>
+                        </group>
+                        <group>
+                            <field name="branch_id"/>
+                            <field name="district_name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+</odoo>

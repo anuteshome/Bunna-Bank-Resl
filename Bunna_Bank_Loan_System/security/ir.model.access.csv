@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_bunna_employees,access.bunna.employees,model_bunna_employees,base.group_user,1,1,1,1
+access_bunna_hr,access.bunna.hr,model_bunna_hr,base.group_user,1,1,1,1
+access_bunna_branch,access.bunna.branch,model_bunna_branch,base.group_user,1,1,1,1
